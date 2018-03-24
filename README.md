@@ -1,7 +1,7 @@
 # Build out AWS GuardDuty
 
 This uses the following to accomplish the tasks
-- Terraform with CloudFormation
+- [Terraform](https://terraform.io/) with [CloudFormation](https://aws.amazon.com/cloudformation/)
   - Terraform creates and maintains state
   - CloudFormation within Terraform because of maturity issues in Terraform dealing with `aws_guardduty_*` resources for `create_member()` and `invite_member()` AWS SDK functions
 - Python (either Python2 or Python3 - using Python3 at the moment)
