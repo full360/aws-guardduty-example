@@ -21,7 +21,9 @@ Terraform is also missing the `create_invite()` and `accept_invite()` API calls 
 This maturity level means that I implemented the actual member creation and invite via CloudFormation stack per region per member. A single stack creation actually creates the member and sends the invite for later processing via Python.
 
 ## Variable used for all steps
-Edit the file `requirements.tf` and set the list variable `region_list` to the regions you wish to enable AWS GuardDuty in. This affects the master and member accounts and is used in all steps of implementation.
+Edit the file `variables.tf` and set the list variable `region_list` to the regions you wish to enable AWS GuardDuty in. This affects the master and member accounts and is used in all steps of implementation.
+
+Edit the file `variables.tf` and set the variable `master_account_id` to the account ID of the master account.
 
 ## Steps to accomplish master account setup
 You'll need an S3 bucket to store the terraform state file. You have two options: Create a bucket for such storage **or** utilize an existing bucket.
