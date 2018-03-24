@@ -1,6 +1,6 @@
 # static
 variable "master_account_id" {
-  default = "475198864502"
+  default = "234567890123"
 }
 
 variable "region_list" {
