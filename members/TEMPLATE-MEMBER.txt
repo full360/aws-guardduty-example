@@ -1,0 +1,329 @@
+data "template_file" "json-MEMBERID-ap-south-1" {
+  count    = "${contains("${var.region_list}", "ap-south-1") ? 1 : 0}"
+  template = "${file("gd-member-create-invite.json")}"
+
+  vars {
+    member_id          = "MEMBERID"
+    root_email         = "MEMBEREMAIL"
+    master_detector_id = "${data.terraform_remote_state.master.master-ap-south-1.0}"
+    region             = "aps1"
+  }
+}
+
+data "template_file" "json-MEMBERID-eu-west-3" {
+  count    = "${contains("${var.region_list}", "eu-west-3") ? 1 : 0}"
+  template = "${file("gd-member-create-invite.json")}"
+
+  vars {
+    member_id          = "MEMBERID"
+    root_email         = "MEMBEREMAIL"
+    master_detector_id = "${data.terraform_remote_state.master.master-eu-west-3.0}"
+    region             = "euw3"
+  }
+}
+
+data "template_file" "json-MEMBERID-eu-west-2" {
+  count    = "${contains("${var.region_list}", "eu-west-2") ? 1 : 0}"
+  template = "${file("gd-member-create-invite.json")}"
+
+  vars {
+    member_id          = "MEMBERID"
+    root_email         = "MEMBEREMAIL"
+    master_detector_id = "${data.terraform_remote_state.master.master-eu-west-2.0}"
+    region             = "euw2"
+  }
+}
+
+data "template_file" "json-MEMBERID-eu-west-1" {
+  count    = "${contains("${var.region_list}", "eu-west-1") ? 1 : 0}"
+  template = "${file("gd-member-create-invite.json")}"
+
+  vars {
+    member_id          = "MEMBERID"
+    root_email         = "MEMBEREMAIL"
+    master_detector_id = "${data.terraform_remote_state.master.master-eu-west-1.0}"
+    region             = "euw1"
+  }
+}
+
+data "template_file" "json-MEMBERID-ap-northeast-2" {
+  count    = "${contains("${var.region_list}", "ap-northeast-2") ? 1 : 0}"
+  template = "${file("gd-member-create-invite.json")}"
+
+  vars {
+    member_id          = "MEMBERID"
+    root_email         = "MEMBEREMAIL"
+    master_detector_id = "${data.terraform_remote_state.master.master-ap-northeast-2.0}"
+    region             = "apne2"
+  }
+}
+
+data "template_file" "json-MEMBERID-ap-northeast-1" {
+  count    = "${contains("${var.region_list}", "ap-northeast-1") ? 1 : 0}"
+  template = "${file("gd-member-create-invite.json")}"
+
+  vars {
+    member_id          = "MEMBERID"
+    root_email         = "MEMBEREMAIL"
+    master_detector_id = "${data.terraform_remote_state.master.master-ap-northeast-1.0}"
+    region             = "apne1"
+  }
+}
+
+data "template_file" "json-MEMBERID-sa-east-1" {
+  count    = "${contains("${var.region_list}", "sa-east-1") ? 1 : 0}"
+  template = "${file("gd-member-create-invite.json")}"
+
+  vars {
+    member_id          = "MEMBERID"
+    root_email         = "MEMBEREMAIL"
+    master_detector_id = "${data.terraform_remote_state.master.master-sa-east-1.0}"
+    region             = "sae1"
+  }
+}
+
+data "template_file" "json-MEMBERID-ca-central-1" {
+  count    = "${contains("${var.region_list}", "ca-central-1") ? 1 : 0}"
+  template = "${file("gd-member-create-invite.json")}"
+
+  vars {
+    member_id          = "MEMBERID"
+    root_email         = "MEMBEREMAIL"
+    master_detector_id = "${data.terraform_remote_state.master.master-ca-central-1.0}"
+    region             = "cac1"
+  }
+}
+
+data "template_file" "json-MEMBERID-ap-southeast-1" {
+  count    = "${contains("${var.region_list}", "ap-southeast-1") ? 1 : 0}"
+  template = "${file("gd-member-create-invite.json")}"
+
+  vars {
+    member_id          = "MEMBERID"
+    root_email         = "MEMBEREMAIL"
+    master_detector_id = "${data.terraform_remote_state.master.master-ap-southeast-1.0}"
+    region             = "apse1"
+  }
+}
+
+data "template_file" "json-MEMBERID-ap-southeast-2" {
+  count    = "${contains("${var.region_list}", "ap-southeast-2") ? 1 : 0}"
+  template = "${file("gd-member-create-invite.json")}"
+
+  vars {
+    member_id          = "MEMBERID"
+    root_email         = "MEMBEREMAIL"
+    master_detector_id = "${data.terraform_remote_state.master.master-ap-southeast-2.0}"
+    region             = "apse2"
+  }
+}
+
+data "template_file" "json-MEMBERID-eu-central-1" {
+  count    = "${contains("${var.region_list}", "eu-central-1") ? 1 : 0}"
+  template = "${file("gd-member-create-invite.json")}"
+
+  vars {
+    member_id          = "MEMBERID"
+    root_email         = "MEMBEREMAIL"
+    master_detector_id = "${data.terraform_remote_state.master.master-eu-central-1.0}"
+    region             = "euc1"
+  }
+}
+
+data "template_file" "json-MEMBERID-us-east-1" {
+  count    = "${contains("${var.region_list}", "us-east-1") ? 1 : 0}"
+  template = "${file("gd-member-create-invite.json")}"
+
+  vars {
+    member_id          = "MEMBERID"
+    root_email         = "MEMBEREMAIL"
+    master_detector_id = "${data.terraform_remote_state.master.master-us-east-1.0}"
+    region             = "use1"
+  }
+}
+
+data "template_file" "json-MEMBERID-us-east-2" {
+  count    = "${contains("${var.region_list}", "us-east-2") ? 1 : 0}"
+  template = "${file("gd-member-create-invite.json")}"
+
+  vars {
+    member_id          = "MEMBERID"
+    root_email         = "MEMBEREMAIL"
+    master_detector_id = "${data.terraform_remote_state.master.master-us-east-2.0}"
+    region             = "use2"
+  }
+}
+
+data "template_file" "json-MEMBERID-us-west-1" {
+  count    = "${contains("${var.region_list}", "us-west-1") ? 1 : 0}"
+  template = "${file("gd-member-create-invite.json")}"
+
+  vars {
+    member_id          = "MEMBERID"
+    root_email         = "MEMBEREMAIL"
+    master_detector_id = "${data.terraform_remote_state.master.master-us-west-1.0}"
+    region             = "usw1"
+  }
+}
+
+data "template_file" "json-MEMBERID-us-west-2" {
+  count    = "${contains("${var.region_list}", "us-west-2") ? 1 : 0}"
+  template = "${file("gd-member-create-invite.json")}"
+
+  vars {
+    member_id          = "MEMBERID"
+    root_email         = "MEMBEREMAIL"
+    master_detector_id = "${data.terraform_remote_state.master.master-us-west-2.0}"
+    region             = "usw2"
+  }
+}
+
+resource "aws_cloudformation_stack" "MEMBERID-ap-south-1" {
+  count    = "${contains("${var.region_list}", "ap-south-1") ? 1 : 0}"
+  name     = "gd-member-aps1-MEMBERID"
+  provider = "aws.master-ap-south-1"
+
+  on_failure = "ROLLBACK"
+
+  template_body = "${data.template_file.json-MEMBERID-ap-south-1.rendered}"
+}
+
+resource "aws_cloudformation_stack" "MEMBERID-eu-west-3" {
+  count    = "${contains("${var.region_list}", "eu-west-3") ? 1 : 0}"
+  name     = "gd-member-euw3-MEMBERID"
+  provider = "aws.master-eu-west-3"
+
+  on_failure = "ROLLBACK"
+
+  template_body = "${data.template_file.json-MEMBERID-eu-west-3.rendered}"
+}
+
+resource "aws_cloudformation_stack" "MEMBERID-eu-west-2" {
+  count    = "${contains("${var.region_list}", "eu-west-2") ? 1 : 0}"
+  name     = "gd-member-euw2-MEMBERID"
+  provider = "aws.master-eu-west-2"
+
+  on_failure = "ROLLBACK"
+
+  template_body = "${data.template_file.json-MEMBERID-eu-west-2.rendered}"
+}
+
+resource "aws_cloudformation_stack" "MEMBERID-eu-west-1" {
+  count    = "${contains("${var.region_list}", "eu-west-1") ? 1 : 0}"
+  name     = "gd-member-euw1-MEMBERID"
+  provider = "aws.master-eu-west-1"
+
+  on_failure = "ROLLBACK"
+
+  template_body = "${data.template_file.json-MEMBERID-eu-west-1.rendered}"
+}
+
+resource "aws_cloudformation_stack" "MEMBERID-ap-northeast-2" {
+  count    = "${contains("${var.region_list}", "ap-northeast-2") ? 1 : 0}"
+  name     = "gd-member-apne2-MEMBERID"
+  provider = "aws.master-ap-northeast-2"
+
+  on_failure = "ROLLBACK"
+
+  template_body = "${data.template_file.json-MEMBERID-ap-northeast-2.rendered}"
+}
+
+resource "aws_cloudformation_stack" "MEMBERID-ap-northeast-1" {
+  count    = "${contains("${var.region_list}", "ap-northeast-1") ? 1 : 0}"
+  name     = "gd-member-apne1-MEMBERID"
+  provider = "aws.master-ap-northeast-1"
+
+  on_failure = "ROLLBACK"
+
+  template_body = "${data.template_file.json-MEMBERID-ap-northeast-1.rendered}"
+}
+
+resource "aws_cloudformation_stack" "MEMBERID-sa-east-1" {
+  count    = "${contains("${var.region_list}", "sa-east-1") ? 1 : 0}"
+  name     = "gd-member-sae1-MEMBERID"
+  provider = "aws.master-sa-east-1"
+
+  on_failure = "ROLLBACK"
+
+  template_body = "${data.template_file.json-MEMBERID-sa-east-1.rendered}"
+}
+
+resource "aws_cloudformation_stack" "MEMBERID-ca-central-1" {
+  count    = "${contains("${var.region_list}", "ca-central-1") ? 1 : 0}"
+  name     = "gd-member-cac1-MEMBERID"
+  provider = "aws.master-ca-central-1"
+
+  on_failure = "ROLLBACK"
+
+  template_body = "${data.template_file.json-MEMBERID-ca-central-1.rendered}"
+}
+
+resource "aws_cloudformation_stack" "MEMBERID-ap-southeast-1" {
+  count    = "${contains("${var.region_list}", "ap-southeast-1") ? 1 : 0}"
+  name     = "gd-member-apse1-MEMBERID"
+  provider = "aws.master-ap-southeast-1"
+
+  on_failure = "ROLLBACK"
+
+  template_body = "${data.template_file.json-MEMBERID-ap-southeast-1.rendered}"
+}
+
+resource "aws_cloudformation_stack" "MEMBERID-ap-southeast-2" {
+  count    = "${contains("${var.region_list}", "ap-southeast-2") ? 1 : 0}"
+  name     = "gd-member-apse2-MEMBERID"
+  provider = "aws.master-ap-southeast-2"
+
+  on_failure = "ROLLBACK"
+
+  template_body = "${data.template_file.json-MEMBERID-ap-southeast-2.rendered}"
+}
+
+resource "aws_cloudformation_stack" "MEMBERID-eu-central-1" {
+  count    = "${contains("${var.region_list}", "eu-central-1") ? 1 : 0}"
+  name     = "gd-member-euc1-MEMBERID"
+  provider = "aws.master-eu-central-1"
+
+  on_failure = "ROLLBACK"
+
+  template_body = "${data.template_file.json-MEMBERID-eu-central-1.rendered}"
+}
+
+resource "aws_cloudformation_stack" "MEMBERID-us-east-1" {
+  count    = "${contains("${var.region_list}", "us-east-1") ? 1 : 0}"
+  name     = "gd-member-use1-MEMBERID"
+  provider = "aws.master-us-east-1"
+
+  on_failure = "ROLLBACK"
+
+  template_body = "${data.template_file.json-MEMBERID-us-east-1.rendered}"
+}
+
+resource "aws_cloudformation_stack" "MEMBERID-us-east-2" {
+  count    = "${contains("${var.region_list}", "us-east-2") ? 1 : 0}"
+  name     = "gd-member-use2-MEMBERID"
+  provider = "aws.master-us-east-2"
+
+  on_failure = "ROLLBACK"
+
+  template_body = "${data.template_file.json-MEMBERID-us-east-2.rendered}"
+}
+
+resource "aws_cloudformation_stack" "MEMBERID-us-west-1" {
+  count    = "${contains("${var.region_list}", "us-west-1") ? 1 : 0}"
+  name     = "gd-member-usw1-MEMBERID"
+  provider = "aws.master-us-west-1"
+
+  on_failure = "ROLLBACK"
+
+  template_body = "${data.template_file.json-MEMBERID-us-west-1.rendered}"
+}
+
+resource "aws_cloudformation_stack" "MEMBERID-us-west-2" {
+  count    = "${contains("${var.region_list}", "us-west-2") ? 1 : 0}"
+  name     = "gd-member-usw2-MEMBERID"
+  provider = "aws.master-us-west-2"
+
+  on_failure = "ROLLBACK"
+
+  template_body = "${data.template_file.json-MEMBERID-us-west-2.rendered}"
+}

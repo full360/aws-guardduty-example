@@ -1,0 +1,14 @@
+{
+	"Resources": {
+		"${region}${member_id}": {
+			"Type": "AWS::GuardDuty::Member",
+			"Properties": {
+				"DetectorId": "${master_detector_id}",
+				"Email": "${root_email}",
+				"MemberId": "${member_id}",
+				"Message": "Invite to GuardDuty Master",
+				"Status": "Invited"
+			}
+		}
+	}
+}
